@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es2015",
+    "esModuleInterop": true,
+    "noEmitOnError": true,
+    "outDir": "public",
+    "rootDir": "./src",
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "nodenext"
+  },
+  "include": ["src"]
+}
