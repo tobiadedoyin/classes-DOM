@@ -14,13 +14,16 @@ const list = new ListTemplate(ul);
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  let values: [string, string, number] = [
+    fromTo.value,
+    details.value,
+    +amount.value,
+  ];
   let doc: HasFormatter;
   if (type.value === "invoice") {
-    doc = new Invoice(fromTo.value, details.value, +amount.value);
+    doc = new Invoice(...values);
   } else {
-    doc = new Payment(fromTo.value, details.value, +amount.value);
+    doc = new Payment(...values);
   }
   list.render(doc, type.value, "end");
 });
-
-//generic
